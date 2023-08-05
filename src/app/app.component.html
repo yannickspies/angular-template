@@ -1,6 +1,6 @@
 <div class="flex flex-col min-h-screen">
   <header class="p-2">
-    <h1 class="text-xl font-bold">> Angular Template</h1>
+    <app-text [isBold]="true" [textAlign]="'right'">Angular Template</app-text>
   </header>
   <main class="flex-1 p-3">
     <app-button-holder
@@ -8,6 +8,6 @@
     >
   </main>
   <footer class="p-2">
-    <p>made by Yannick</p>
+    <app-text [textAlign]="'left'">made by Yannick</app-text>
   </footer>
 </div>
