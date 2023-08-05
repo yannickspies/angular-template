@@ -1,1 +1,25 @@
-<p>button works!</p>
+<button
+  [ngClass]="{
+    'h-6 text-sm': size === 'small',
+    'h-9 text-base': size === 'medium',
+    'h-14 text-lg': size === 'large',
+    'rounded-sm': !rounded,
+    'rounded-full': rounded,
+    'w-full': isBlock,
+    'bg-primary-800': appearance === 'primary',
+    'text-primary-800 ': appearance === 'secondary',
+    'text-red-800 hover:bg-red-100 focus:bg-red-100': appearance === 'danger',
+    'bg-white': appearance !== 'primary',
+    'text-white': appearance === 'primary',
+    'hover:bg-primary-400 hover:text-primary-800 focus:bg-primary-400 focus:text-primary-800':
+      appearance === 'primary' || appearance === 'secondary',
+    'min-w-[150px] gap-x-10': !isBlock && ngContent.innerHTML.trim(),
+    'min-w-[35px]': isBlock && !ngContent.innerHTML.trim(),
+    '!cursor-not-allowed !bg-gray-100 !text-gray-600': isDisabled
+  }"
+  class="inline-flex cursor-pointer items-center px-2 font-bold shadow focus:outline-none"
+  [type]="type"
+  (click)="onClick($event)"
+>
+  <span #ngContent><ng-content></ng-content></span>
+</button>
