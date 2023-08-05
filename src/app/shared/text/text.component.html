@@ -1,0 +1,19 @@
+<span
+  class="block"
+  [ngClass]="{
+    'text-black': !isMuted,
+    'text-gray-500': isMuted,
+    'font-normal': !isBold,
+    'font-bold': isBold,
+    'text-sm': size === 'sm',
+    'text-base': size === 'base',
+    'text-lg': size === 'lg',
+    'text-left': textAlign === 'left',
+    'text-right': textAlign === 'right',
+    'text-center': textAlign === 'center',
+    truncate: truncate
+  }"
+>
+  <span *ngIf="content" [innerHTML]="content"></span>
+  <ng-content></ng-content>
+</span>
