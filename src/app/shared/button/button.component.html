@@ -6,12 +6,12 @@
     'rounded-sm': !rounded,
     'rounded-full': rounded,
     'w-full': isBlock,
-    'bg-primary-800': appearance === 'primary',
-    'text-primary-800 ': appearance === 'secondary',
+    'bg-indigo-800': appearance === 'primary',
+    'text-indigo-800 ': appearance === 'secondary',
     'text-red-800 hover:bg-red-100 focus:bg-red-100': appearance === 'danger',
     'bg-white': appearance !== 'primary',
     'text-white': appearance === 'primary',
-    'hover:bg-primary-400 hover:text-primary-800 focus:bg-primary-400 focus:text-primary-800':
+    'hover:bg-indigo-400 hover:text-indigo-800 focus:bg-indigo-400 focus:text-indigo-800':
       appearance === 'primary' || appearance === 'secondary',
     'min-w-[150px] gap-x-10': !isBlock && ngContent.innerHTML.trim(),
     'min-w-[35px]': isBlock && !ngContent.innerHTML.trim(),
