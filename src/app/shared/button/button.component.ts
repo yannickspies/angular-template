@@ -15,7 +15,6 @@ export class ButtonComponent {
   @Input() appearance: Appearance = 'primary';
   @Input() size: 'small' | 'medium' | 'large' = 'medium';
   @Input() public isDisabled?: boolean;
-  @Input() public rounded = false;
   @Input() public isBlock?: boolean;
   @Input() public type: ButtonType = 'button';
 
