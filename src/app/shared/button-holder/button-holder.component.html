@@ -1,0 +1,11 @@
+<div
+  [ngClass]="{
+    'justify-between': side === 'between',
+    'justify-start': side === 'start',
+    'justify-center': side === 'center',
+    'justify-end': side === 'end'
+  }"
+  class="flex space-x-2"
+>
+  <ng-content></ng-content>
+</div>
