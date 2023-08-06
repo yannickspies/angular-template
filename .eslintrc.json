@@ -4,7 +4,10 @@
   "plugins": ["prettier"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"]
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/explicit-member-accessibility": "error"
+      }
     }
   ]
 }

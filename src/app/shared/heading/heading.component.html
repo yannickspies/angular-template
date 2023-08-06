@@ -1,0 +1,21 @@
+<div class="block font-bold">
+  <h1 *ngIf="size === 'xl'" class="text-3xl">
+    <ng-container [ngTemplateOutlet]="ngContent"></ng-container>
+  </h1>
+  <h1 *ngIf="size === 'lg'" class="text-2xl">
+    <ng-container [ngTemplateOutlet]="ngContent"></ng-container>
+  </h1>
+  <h2 *ngIf="size === 'base'" class="text-xl">
+    <ng-container [ngTemplateOutlet]="ngContent"></ng-container>
+  </h2>
+  <h3 *ngIf="size === 'sm'" class="text-lg">
+    <ng-container [ngTemplateOutlet]="ngContent"></ng-container>
+  </h3>
+  <h3 *ngIf="size === 'xs'" class="text-base">
+    <ng-container [ngTemplateOutlet]="ngContent"></ng-container>
+  </h3>
+</div>
+
+<ng-template #ngContent>
+  <ng-content></ng-content>
+</ng-template>
