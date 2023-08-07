@@ -1,0 +1,17 @@
+<div class="fixed right-20 top-[200px] z-[99999]">
+  <ng-container *ngIf="notifications$ | async as notifications">
+    <ng-container *ngIf="notifications.length">
+      <article
+        *ngFor="let notification of notifications"
+        class="mb-5 max-w-[360px] rounded p-5 text-base"
+        [ngClass]="{
+          'bg-yellow-100 text-yellow-800': notification.type === NotificationTypes.WARNING,
+          'bg-red-100 text-red-800': notification.type === NotificationTypes.DANGER,
+          'bg-blue-100 text-blue-800': notification.type === NotificationTypes.INFO,
+          'bg-green-100 text-green-800': notification.type === NotificationTypes.SUCCESS
+        }"
+        [innerHTML]="notification.message"
+      ></article>
+    </ng-container>
+  </ng-container>
+</div>
