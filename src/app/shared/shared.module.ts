@@ -5,9 +5,18 @@ import { ButtonHolderComponent } from './button-holder/button-holder.component';
 import { TextComponent } from './text/text.component';
 import { HeadingComponent } from './heading/heading.component';
 import { IconComponent } from './icon/icon.component';
+import { InputTextComponent } from './input-text/input-text.component';
 
 @NgModule({
-  imports: [ButtonComponent, CommonModule, ButtonHolderComponent, TextComponent, HeadingComponent, IconComponent],
-  exports: [ButtonComponent, ButtonHolderComponent, TextComponent, HeadingComponent, IconComponent],
+  imports: [
+    ButtonComponent,
+    CommonModule,
+    ButtonHolderComponent,
+    TextComponent,
+    HeadingComponent,
+    IconComponent,
+    InputTextComponent,
+  ],
+  exports: [ButtonComponent, ButtonHolderComponent, TextComponent, HeadingComponent, IconComponent, InputTextComponent],
 })
 export class SharedModule {}

@@ -3,8 +3,8 @@
   Change relevant attributes in both components
 -->
 <input
-  [class.h-30]="size === 'sm'"
-  [class.h-35]="size === 'base'"
+  [class.h-7]="size === 'sm'"
+  [class.h-9]="size === 'base'"
   [class.border-l-red-800]="formControl.invalid || (required && !formControl.value)"
   [class.focus:border-l-red-800]="formControl.invalid || (required && !formControl.value)"
   [class.focus:border-l-green-600]="formControl.valid"
@@ -12,7 +12,7 @@
   [attr.name]="name ? name : null"
   [attr.placeholder]="placeholder ? placeholder : null"
   [formControl]="formControl"
-  class="block w-full border-l-[5px] border-gray-600 border-l-green-600 bg-white px-10 py-0 text-base text-black placeholder-gray-600 focus:border-gray-600 focus:ring-0 focus:ring-offset-0 disabled:cursor-not-allowed disabled:border-l-[1px] disabled:border-l-gray-600 disabled:bg-gray-100"
+  class="block w-full border-l-[5px] border-gray-600 border border-l-green-600 bg-white px-2 py-0 text-base text-black placeholder-gray-600 focus:border-gray-600 focus:ring-0 focus:ring-offset-0 disabled:cursor-not-allowed disabled:border-l-[1px] disabled:border-l-gray-600 disabled:bg-gray-100"
   [attr.type]="type"
   [attr.min]="min"
 />
