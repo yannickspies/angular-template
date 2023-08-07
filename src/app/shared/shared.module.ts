@@ -7,6 +7,7 @@ import { HeadingComponent } from './heading/heading.component';
 import { IconComponent } from './icon/icon.component';
 import { InputTextComponent } from './input-text/input-text.component';
 import { InputPasswordWithToggleModule } from './input-password-with-toggle/input-password-with-toggle.module';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { InputPasswordWithToggleModule } from './input-password-with-toggle/inpu
     IconComponent,
     InputTextComponent,
     InputPasswordWithToggleModule,
+    CheckboxComponent,
   ],
   exports: [
     ButtonComponent,
@@ -27,6 +29,7 @@ import { InputPasswordWithToggleModule } from './input-password-with-toggle/inpu
     IconComponent,
     InputTextComponent,
     InputPasswordWithToggleModule,
+    CheckboxComponent,
   ],
 })
 export class SharedModule {}

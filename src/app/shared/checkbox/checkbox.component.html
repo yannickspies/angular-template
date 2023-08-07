@@ -1,0 +1,34 @@
+<div class="flex items-start">
+  <div class="flex items-center">
+    <input
+      [formControl]="formControl"
+      [id]="id"
+      [name]="name"
+      [class.h-5]="size === 'sm'"
+      [class.h-6]="size === 'base'"
+      [class.h-7]="size === 'lg'"
+      [class.w-5]="size === 'sm'"
+      [class.w-6]="size === 'base'"
+      [class.w-7]="size === 'lg'"
+      type="checkbox"
+      class="cursor-pointer rounded"
+    />
+  </div>
+  <div class="ml-2 flex-grow">
+    <label
+      [ngClass]="{
+        'h-5': size === 'sm',
+        'h-6': size === 'base',
+        'h-7': size === 'lg'
+      }"
+      *ngIf="label"
+      [for]="id"
+      class="flex cursor-pointer items-center"
+    >
+      <app-text [size]="labelSize" [isMuted]="control?.disabled === true" [isBold]="control?.value === true">
+        {{ label }}
+      </app-text>
+    </label>
+    <app-text *ngIf="description" [size]="labelSize" [isMuted]="true">{{ description }}</app-text>
+  </div>
+</div>
