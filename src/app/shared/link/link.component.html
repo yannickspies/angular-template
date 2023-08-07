@@ -1,0 +1,16 @@
+<a
+  class="inline-block max-w-full cursor-pointer align-middle underline"
+  [ngClass]="{
+    'text-sm': size === 'sm',
+    'text-base': size === 'base',
+    'text-lg': size === 'lg',
+    'text-blue-800': appearance === 'primary',
+    'text-gray-600': appearance === 'secondary',
+    'text-black no-underline hover:text-blue-800 hover:underline': appearance === 'dark',
+    'font-bold': isBold,
+    'font-normal': !isBold,
+    truncate: truncate
+  }"
+>
+  <ng-content></ng-content>
+</a>

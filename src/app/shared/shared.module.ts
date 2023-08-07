@@ -9,6 +9,7 @@ import { InputTextComponent } from './input-text/input-text.component';
 import { InputPasswordWithToggleModule } from './input-password-with-toggle/input-password-with-toggle.module';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { FormValidationComponent } from './form-validation/form-validation.component';
+import { LinkComponent } from './link/link.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { FormValidationComponent } from './form-validation/form-validation.compo
     InputPasswordWithToggleModule,
     CheckboxComponent,
     FormValidationComponent,
+    LinkComponent,
   ],
   exports: [
     ButtonComponent,
@@ -33,6 +35,7 @@ import { FormValidationComponent } from './form-validation/form-validation.compo
     InputPasswordWithToggleModule,
     CheckboxComponent,
     FormValidationComponent,
+    LinkComponent,
   ],
 })
 export class SharedModule {}
