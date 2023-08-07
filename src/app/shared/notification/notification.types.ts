@@ -1,6 +1,6 @@
 import { NotificationTypes } from './notification.enums';
 
-export interface ToasterNotification {
+export interface Notification {
   type: NotificationTypes;
   message: string;
   timeout?: number;
